@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bora SP — O que rolar em São Paulo agora</title>
+<meta name="description" content="Shows, teatro, passeios, hospedagem e achadinhos em São Paulo — atualizado automaticamente, perto de onde você está agora.">
+<link rel="canonical" href="https://borasp.com.br/">
+
+<!-- Open Graph / compartilhamento -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bora SP">
+<meta property="og:title" content="Bora SP — O que rolar em São Paulo agora">
+<meta property="og:description" content="Shows, teatro, passeios, hospedagem e achadinhos em São Paulo — atualizado automaticamente.">
+<meta property="og:url" content="https://borasp.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">BORA<span>SP</span></div>
+  <select class="lang-switch" id="langSelect">
+    <option value="pt">🇧🇷 PT</option>
+    <option value="en">🇺🇸 EN</option>
+    <option value="es">🇪🇸 ES</option>
+    <option value="ja">🇯🇵 JA</option>
+    <option value="de">🇩🇪 DE</option>
+    <option value="it">🇮🇹 IT</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</header>
+
+<div class="board">
+  <div class="board-top">
+    <span><span class="dot"></span><span id="liveLabel">AO VIVO</span> · <span id="clock">--:--:--</span></span>
+    <span id="cityLabel">SÃO PAULO, BR</span>
+  </div>
+  <h1 class="hero-title" id="heroTitle">O que rolar<br><span class="accent">em São Paulo</span></h1>
+  <p class="hero-sub" id="heroSub">Shows, teatro, hospedagem e achadinhos — tudo perto de onde sua corrida está passando agora.</p>
+  <div class="search-wrap">
+    <input type="text" class="search-input" id="searchInput" placeholder="">
+    <span class="search-icon">⌕</span>
+  </div>
+  <div class="local-chips" id="localChips"></div>
+</div>
+
+<!-- EVENTOS - foco principal, cards maiores estilo Eventim -->
+<div class="section" data-sec="eventos">
+  <div class="section-head">
+    <div class="section-name display" id="stationEventosName">Eventos</div>
+    <div class="section-tag mono" id="stationEventosTag">GRANDES EVENTOS</div>
+  </div>
+  <p class="section-desc" id="stationEventosDesc">Shows, teatro e experiências acontecendo na cidade nos próximos dias.</p>
+  <div class="mood-bar" id="moodBar"></div>
+  <div class="adult-toggle-wrap">
+    <div class="adult-toggle" id="adultToggle" role="switch" aria-checked="false"></div>
+    <span class="adult-toggle-label" id="adultToggleLabel"></span>
+  </div>
+  <div class="rail-wrap">
+    <button class="rail-arrow prev" data-scroll-rail="railEventos" data-dir="-1" aria-label="Anterior">‹</button>
+    <div class="featured-rail" id="railEventos"></div>
+    <button class="rail-arrow next" data-scroll-rail="railEventos" data-dir="1" aria-label="Próximo">›</button>
+  </div>
+</div>
+
+<!-- INTERNACIONAL - grandes turnês chegando ao Brasil -->
+<div class="section" data-sec="internacional">
+  <div class="section-head">
+    <div class="section-name display" id="stationIntlName">Internacional</div>
+    <div class="section-tag mono" id="stationIntlTag">TURNÊS NO BRASIL</div>
+  </div>
+  <p class="section-desc" id="stationIntlDesc">Grandes nomes internacionais com data confirmada no Brasil.</p>
+  <div class="rail-wrap">
+    <button class="rail-arrow prev" data-scroll-rail="railIntl" data-dir="-1" aria-label="Anterior">‹</button>
+    <div class="featured-rail" id="railIntl"></div>
+    <button class="rail-arrow next" data-scroll-rail="railIntl" data-dir="1" aria-label="Próximo">›</button>
+  </div>
+</div>
+
+<!-- PARQUES E PONTOS TURÍSTICOS -->
+<div class="section" data-sec="passeios">
+  <div class="section-head">
+    <div class="section-name display" id="stationPasseiosName">Passeios</div>
+    <div class="section-tag mono" id="stationPasseiosTag">CONHECER</div>
+  </div>
+  <p class="section-desc" id="stationPasseiosDesc">Parques, mirantes e pontos turísticos para conhecer a cidade além da corrida.</p>
+  <div class="rail-wrap">
+    <button class="rail-arrow prev" data-scroll-rail="railPasseios" data-dir="-1" aria-label="Anterior">‹</button>
+    <div class="rail" id="railPasseios"></div>
+    <button class="rail-arrow next" data-scroll-rail="railPasseios" data-dir="1" aria-label="Próximo">›</button>
+  </div>
+</div>
+
+<!-- VOCÊ SABIA - curiosidade rotativa -->
+<div class="trivia-section">
+  <div class="trivia-card">
+    <div class="trivia-eyebrow mono" id="triviaEyebrow">VOCÊ SABIA?</div>
+    <p class="trivia-text" id="triviaText"></p>
+    <button class="trivia-next mono" id="triviaNext"></button>
+  </div>
+</div>
+
+<!-- ARREDORES - litoral, interior, serra -->
+<div class="section" data-sec="arredores">
+  <div class="section-head">
+    <div class="section-name display" id="stationArredoresName">Arredores</div>
+    <div class="section-tag mono" id="stationArredoresTag">SAIR DA CIDADE</div>
+  </div>
+  <p class="section-desc" id="stationArredoresDesc">Litoral, serra e região metropolitana — bons roteiros pra quem tem mais tempo em SP.</p>
+  <div class="rail-wrap">
+    <button class="rail-arrow prev" data-scroll-rail="railArredores" data-dir="-1" aria-label="Anterior">‹</button>
+    <div class="rail" id="railArredores"></div>
+    <button class="rail-arrow next" data-scroll-rail="railArredores" data-dir="1" aria-label="Próximo">›</button>
+  </div>
+</div>
+
+<!-- HOSPEDAGEM - secundário -->
+<div class="section" data-sec="hospedagem">
+  <div class="section-head">
+    <div class="section-name display" id="stationHospName">Hospedagem</div>
+    <div class="section-tag mono" id="stationHospTag">FICAR</div>
+  </div>
+  <p class="section-desc" id="stationHospDesc">Opções de hotel e pousada perto das principais regiões da cidade.</p>
+  <div class="rail" id="railHosp"></div>
+</div>
+
+<!-- PRODUTOS - secundário -->
+<div class="section" data-sec="produtos">
+  <div class="section-head">
+    <div class="section-name display" id="stationProdName">Achadinhos</div>
+    <div class="section-tag mono" id="stationProdTag">LEVAR</div>
+  </div>
+  <p class="section-desc" id="stationProdDesc">Produtos em destaque — do perfume ao souvenir, com entrega para todo o Brasil.</p>
+  <div class="rail" id="railProd"></div>
+</div>
+
+<footer>
+  <div class="foot-logo display">BORA<span>SP</span></div>
+  <p id="footText">Conteúdo atualizado automaticamente. Confira sempre horários, valores e disponibilidade na página oficial de cada evento ou fornecedor antes de sair.</p>
+</footer>
+
+<div class="modal-backdrop" id="eventModal">
+  <div class="modal-card">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Fechar">×</button>
+    <div class="modal-img" id="modalImg"></div>
+    <div class="modal-body">
+      <div class="modal-source mono" id="modalSource"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-meta mono" id="modalMeta"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-actions">
+        <button class="modal-back" id="modalBack"></button>
+        <a class="modal-official" id="modalOfficial" href="#" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/script.js" defer></script>
+</body>
+</html>

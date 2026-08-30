@@ -1,0 +1,20 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  # Sem 'unsafe-inline' em script-src: todo onclick inline foi removido do HTML
+  # e substituído por addEventListener em script.js (ver wireStaticListeners()).
+
+/style.css
+  Cache-Control: public, max-age=86400
+
+/script.js
+  Cache-Control: public, max-age=3600
+
+/data/events.json
+  Cache-Control: public, max-age=900
+
+/api/feed
+  Cache-Control: public, max-age=900

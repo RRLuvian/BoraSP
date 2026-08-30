@@ -1,0 +1,40 @@
+{
+  "curatedEvents": [
+    {"title":"Summer Eletro Essepê – No Subsolo", "meta":"22–23 AGO · CENTRO", "badge":"HOJE", "moods":["musica","noturno","amigos"], "source":"Sympla", "affiliate":true, "ageRating":"18"},
+    {"title":"Sidney Magal – Show em SP", "meta":"29 AGO · TOKIO MARINE HALL", "badge":"SHOW", "moods":["musica","romantico"], "source":"Eventim", "affiliate":true, "ageRating":"L"},
+    {"title":"Torneio Pokémon TCG SP", "meta":"30 AGO · LIGA LOCAL", "badge":"NERD", "moods":["criativo","amigos"], "source":"Sympla", "affiliate":true, "ageRating":"L"},
+    {"title":"Divas Pop: Charli XCX Trib.", "meta":"29–30 AGO · PICLES", "badge":"FESTA", "moods":["musica","noturno","amigos"], "source":"Sympla", "affiliate":true, "ageRating":"18"},
+    {"title":"Noite Indie & Vinil", "meta":"SEX · BAR ALTERNATIVO", "badge":"ALT", "moods":["musica","noturno","criativo","underground"], "source":"Agenda", "affiliate":false, "ageRating":"18"},
+    {"title":"Workshop de Empreendedorismo Digital", "meta":"31 AGO · COWORKING PAULISTA", "badge":"WORKSHOP", "moods":["profissional","criativo"], "source":"Sympla", "affiliate":true, "ageRating":"L"}
+  ],
+  "internacional": [
+    {"title":"System of a Down and Faith No More", "meta":"15 JAN 2027 · MARACANÃ, RIO DE JANEIRO", "badge":"MEGA SHOW", "moods":["musica","noturno"], "source":"Eventim", "affiliate":true, "ageRating":null},
+    {"title":"Ronnie Wood and His Band (com Imelda May)", "meta":"01 NOV · ESPAÇO UNIMED, SÃO PAULO", "badge":"SHOW", "moods":["musica","romantico"], "source":"Eventim", "affiliate":true, "ageRating":null},
+    {"title":"The Pussycat Dolls", "meta":"30 OUT · SÃO PAULO", "badge":"SHOW", "moods":["musica","noturno","amigos"], "source":"Eventim", "affiliate":true, "ageRating":null}
+  ],
+  "passeios": [
+    {"title":"Parque Ibirapuera", "meta":"ENTRADA GRATUITA", "badge":"PARQUE", "source":"Agenda", "affiliate":false},
+    {"title":"Sampa Sky — Mirante", "meta":"Ed. Mirante do Vale", "badge":"VISTA", "source":"GetYourGuide", "affiliate":true},
+    {"title":"MASP — Museu de Arte", "meta":"Av. Paulista, 1578", "badge":"MUSEU", "source":"Agenda", "affiliate":false},
+    {"title":"Pinacoteca de SP", "meta":"Praça da Luz", "badge":"MUSEU", "source":"Agenda", "affiliate":false},
+    {"title":"Passeio de Helicóptero", "meta":"Sobrevoo da cidade", "badge":"TOUR", "source":"Civitatis", "affiliate":true},
+    {"title":"Dog Park — Parque do Povo", "meta":"ENTRADA GRATUITA · PET", "badge":"PET", "source":"Agenda", "affiliate":false},
+    {"title":"Café Pet Friendly — Vila Madalena", "meta":"aceita pets na mesa", "badge":"PET", "source":"Agenda", "affiliate":false}
+  ],
+  "arredores": [
+    {"title":"Animália Parque — Jundiaí", "meta":"a 1h de SP · família", "badge":"PARQUE", "source":"Ingresso.com", "affiliate":true},
+    {"title":"Campos do Jordão", "meta":"serra · 2h30 de SP", "badge":"SERRA", "source":"ClickBus", "affiliate":true},
+    {"title":"Guarujá — praias", "meta":"litoral · 1h30 de SP", "badge":"LITORAL", "source":"ClickBus", "affiliate":true},
+    {"title":"Ubatuba", "meta":"litoral norte · 3h de SP", "badge":"LITORAL", "source":"ClickBus", "affiliate":true}
+  ],
+  "hosp": [
+    {"title":"Hotel próximo à Paulista", "meta":"a partir de R$ 189/noite", "badge":"4.3★", "source":"Booking", "affiliate":true},
+    {"title":"Pousada Vila Madalena", "meta":"a partir de R$ 149/noite", "badge":"4.6★", "source":"Booking", "affiliate":true},
+    {"title":"Hotel Centro Histórico", "meta":"a partir de R$ 129/noite", "badge":"4.1★", "source":"Decolar", "affiliate":true}
+  ],
+  "prod": [
+    {"title":"Perfume importado — linha noite", "meta":"R$ 89,90", "badge":"OFERTA", "delivery":"2h", "source":"Amazon", "affiliate":true},
+    {"title":"Miniatura Ponte Estaiada SP", "meta":"R$ 34,90", "badge":"SOUVENIR", "delivery":"", "source":"Shopee", "affiliate":true},
+    {"title":"Kit acessórios carro/viagem", "meta":"R$ 59,90", "badge":"ÚTIL", "delivery":"4h", "source":"Amazon", "affiliate":true}
+  ]
+}
